@@ -5,4 +5,5 @@ splc
 - burrows-wheeler transform
 
 cons
-- sequence consensus algorithms can get very complex, the implemented algorithm is the most basic brute force algorithm
+- sequence consensus is technically an unsolved problem. (https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-8-S7-S21) 
+  the implemented algorithm is the most basic brute force algorithm that has exponential time complexity though with 100% accuracy. 

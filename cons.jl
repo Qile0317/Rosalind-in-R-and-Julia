@@ -1,8 +1,6 @@
 #https://rosalind.info/problems/cons/
 # solution assumes there is only 1 consensus!
 
-#doesnt work for A motifs
-
 Nt_dict = Dict( 'A' => 1,
                 'C' => 2,
                 'G' => 3,
@@ -40,10 +38,10 @@ end
 """
     consensus_seq(consensus::Vector{Vector{Int64}})
 
-returns consensus sequence from a motif of A,C,G,T vectors
+returns consensus sequence from a concensus matrix, via the brute force method
 """
 function consensus_seq(consensus::Vector{Vector{Int64}})
-    curr_max, curr_cons_max = fill("A",length(consensus[1])), consensus[1]
+    curr_max, curr_cons_max = fill("A",length(consensus[1])), copy(consensus[1])
     for i in 2:4
         curr = consensus[i]
         for j in 1:length(curr)
@@ -58,6 +56,11 @@ end
 
 #this is the most basic solution i can think of thats O(n) by iterating
 #matrix should be used and revamp
+"""
+    consensus(fasta_file::Vector{String})
+
+Constructs the consensus matrix for a fasta file as a vector of strings
+"""
 function consensus(fasta_file::Vector{String})
     curr_index = 0
     len = get_seqlength(fasta_file)
@@ -66,7 +69,8 @@ function consensus(fasta_file::Vector{String})
         if is_sequence(line)
             for Nt in line
                 curr_index += 1
-                output[Nt_dict[Nt]][curr_index] += 1
+                nucleotide_row = Nt_dict[Nt]
+                output[nucleotide_row][curr_index] += 1
             end
         else #if its the identifier
             curr_index = 0 
@@ -79,9 +83,7 @@ function consensus(fasta_file::Vector{String})
     return answer[1:end-2]
 end
 
-consensus(readlines("inputs/rosalind_cons.txt"))
-
 #I/O 
 open("outputs/cons.txt","w") do io
     write(io,consensus(readlines("inputs/rosalind_cons.txt")))
-end
+end #8457
