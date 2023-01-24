@@ -17,3 +17,7 @@ grph
 
 revp 
 - The algo used was pure brute force O(n^3), but the dynamic programming approach can be O(n^2) if a dp truth matrix is created and iterated over. 
+- Otherwise its very related to manachers algorithm (longest palindromic substr problem)
+
+iprb
+- need to re-work the maths
