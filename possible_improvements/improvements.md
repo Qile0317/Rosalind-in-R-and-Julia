@@ -1,3 +1,6 @@
+GENERAL
+- many fasta processing functions require stitching, even though there can be more memory efficient ways to avoid doing that
+
 splc
 - running all comparisons in 1 run. O(mn)
 - accounting for overlap
