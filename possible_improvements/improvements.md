@@ -1,5 +1,6 @@
 GENERAL
 - many fasta processing functions require stitching, even though there can be more memory efficient ways to avoid doing that
+- learn modulo trick
 
 splc
 - running all comparisons in 1 run. O(mn)
@@ -24,3 +25,6 @@ revp
 
 iprb
 - need to re-work the maths
+
+perm
+- implement my own version of heap's algo instead

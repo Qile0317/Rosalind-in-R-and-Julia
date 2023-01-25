@@ -1,3 +1,4 @@
+#not accounting for start and stop codons
 function translate(rna::String)
     # Define a dictionary of RNA codons and their corresponding amino acids
     codon_table = Dict("UUU" => "F", "UUC" => "F", "UUA" => "L", "UUG" => "L",
