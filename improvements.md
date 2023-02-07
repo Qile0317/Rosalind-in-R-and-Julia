@@ -16,8 +16,8 @@ mprt
 - The matching algorithm is O(mn) where m is the length of the motif, not sure if theres any faster way to do it.
 
 grph
-- The algo used was pretty much brute force O(n^2), and I think this is very related to de bruijn graphs which could make it faster. 
-- something with on-the-go hashing probably would save time complexity
+- The algo used was pretty much brute force O(n^2), and I think this might be related to de bruijn graphs which could make it faster. 
+- something with on-the-go hashing should be able to make it O(n). for every new barcode it would be able to hash back and a variable for whether its been done alr.
 
 revp 
 - The algo used was pure brute force O(n^3), but the dynamic programming approach can be O(n^2) if a dp truth matrix is created and iterated over. 
