@@ -37,3 +37,6 @@ end
 #I/O 
 input = readlines("inputs/rosalind_gc.txt")
 gc(input)
+
+# Rosalind_8003
+# 52.04419889502763
