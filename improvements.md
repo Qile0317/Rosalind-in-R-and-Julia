@@ -32,3 +32,6 @@ perm
 pdst
 - only half of the distances need to be computed, but the approach i did just simply computed them all in place.
 - The simple way to do so is to keep a dict of tuple:float where each tuple is `(j, i) => pd(seq[i],seq[j])` so that when the new i and j gets to there, one first checks if its there and then the dist wont have to be recomputed.
+
+mmch
+- didn't completely understand how the combinatorical solution was arrived at, similar to another previous problem
