@@ -35,3 +35,7 @@ pdst
 
 mmch
 - didn't completely understand how the combinatorical solution was arrived at, similar to another previous problem
+
+orf
+- super inefficient in terms of memory and speed though technically O(n). 
+- theres an extremely sus fix for a bug in the code where some AAs that DONT start with "M" are added...
